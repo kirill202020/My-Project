@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+
+/* :root {
+    --background-color: rgb(245, 246, 246);
+    --color: rgb(19, 18, 18);
+    --header-background: rgb(245, 246, 246);
+} */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(245, 246, 246);
+    color: rgb(19, 18, 18);
+
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, p {
+    text-align: center;
+
+    margin: 10px 0;
+}
+
+h2 {
+    text-align: left;
+    font-weight: bold;
+    margin: 0 0 0 20px;
+}
+
+h3 {
+    margin: 0 10px;
+}
+
+
+.wrapper {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+}
+
+.header {
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(245, 246, 246);
+    position: sticky;
+    top: 0px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+
+    margin: 0 auto;
+}
+
+/* switcher */
+
+input {
+    height: 0;
+  }
+  
+input::before {
+    content: "";
+    position: fixed;
+    background: url("./vader.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    top: 40px;
+    left: 70%;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    z-index: 100;
+  }
+
+/* starwars mode */
+  
+input:checked + .wrapper {
+    background-color: black;
+    color: #fff;
+  }
+
+input:checked + .wrapper .header {
+    background-color: black;
+}
+
+input:checked + .wrapper span {
+    color: rgba(30,183,208,0.97);
+}
+
+input:checked + .wrapper .nav-inner {
+    background: #16181d;
+} 
+
+input:checked + .wrapper .nav-lesson {
+    background: #16181d;
+} 
+
+input:checked + .wrapper .saber-card {
+    display: block;
+} 
+  
+input:checked::before {
+    background-color: #fff;
+}
+
+/* Button */
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 29px;
+    width: 96px;
+    height: 31px;
+    border-radius: 4px;
+    border: 1px solid #02b3e4;
+    background-color: white;
+    color: rgb(47, 49, 54);
+    font-weight: bold;
+}
+
+.btn:hover {
+    border-color: #148BB1;
+    box-shadow: 1px 2px 10px  #C8C8C8;
+}
+
+/* Navigation */
+
+.nav-inner {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-inner:hover {
+    background-color: rgb(232, 243, 231);
+}
+
+.nav-title {
+    width: 100%;
+}
+
+.second:hover {
+    background-color: rgb(223, 230, 240);
+}
+
+/* Lesson card */
+
+.nav-lesson {
+    width: 270px;
+    height: 135px;
+
+    margin: 20px;
+    padding: 10px;
+
+    background-color: #fff;
+    border-radius: 8px;
+
+    box-shadow: 4px 6px 25px #d0d0d0;
+}
+
+.nav-lesson-head {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-lesson-head i {
+    font-size: 18px;
+}
+
+.nav-lesson:hover {
+    box-shadow: 2px 4px 6px #d0d0d0;
+}
+
+.nav-lesson-inner {
+    width: 250px;
+
+    margin-top: 30px;
+    padding-top: 10px;
+
+    border-top: 1px solid rgb(221, 214, 214);
+}
+
+.lesson-card-descr {
+    color: rgb(59, 59, 161);
+    margin-left: 50px;
+}
+
+/* Contact author icon */
+
+.contact-me {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+    animation: turning 3s linear infinite;
+}
+
+.contact-me i {
+    font-size: 50px;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+@keyframes turning {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+  }
+
+.contact-me:hover {
+    width: 110px;
+    height: 110px;
+    background-color: rgb(97, 169, 228);
+}
+
+.contact-me:hover > i {
+    font-size: 60px;
+}
+
+/* control classes */
+
+.disabled {
+    position: relative;
+}
+
+.disabled::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* lightsaber control */
+ 
+ .saber-card {
+    align-items: center;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 32px 16px;
+    position: fixed;
+    left: 100px;
+    bottom: 40px;
+    display: none;
+    /*   transition: box-shadow 0.2s ease-in-out; */
+ }
+ 
+ .saber-card img {
+    max-width: 30px;
+ }
+ 
+ .shadow {
+    background-color: #141414;
+    border-radius: 50%;
+    bottom: 22px;
+    box-shadow: 0px 0px 4px 3px rgba(20, 20, 20, 5);
+    content: "";
+    height: 5px;
+    left: 0;
+    margin: 0 auto;
+    opacity: 0.7;
+    position: absolute;
+    position: absolute;
+    right: 0;
+    transition: 0.6s ease-out;
+    width: 15px;
+ }
+ 
+ /* ---
+ saber light elements
+ --- */
+ .saber {
+    transition: transform 0.6s ease-out;
+ }
+ 
+ .light {
+    border-radius: 50px 50px 0 0;
+    height: 550px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 12px;
+ }
+ 
+ .light::after {
+    content: "";
+    height: 100%;
+    position: absolute;
+    transform: scaley(0);
+    transform-origin: 0 100%;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    z-index: 1;
+ }
+ 
+ /* ---
+ saber background color
+ --- */
+ .lightsaber-1::after {
+    background-color: rgba(30,183,208,0.97);
+ }
+ 
+ /* ---
+ hover elements
+ --- */
+ .saber-card:hover {
+    cursor: pointer;
+ }
+ 
+ .saber-card:hover .saber {
+    animation-delay: 0.6s;
+    animation-direction: alternate;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: hover;
+    animation-timing-function: ease-out;
+    transform: translate(0, -10px);
+    transition: transform 0.6s ease-out;
+ }
+ 
+ .saber-card:hover .shadow {
+    animation-delay: 0.6s;
+    animation-direction: alternate;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: shadowhover;
+    animation-timing-function: ease-out;
+    height: 10px;
+    opacity: 0.3;
+    transform: translate(0, 5px);
+    transition: 0.6s ease-out;
+    width: 30px;
+ }
+ 
+ .saber-card:hover .light::after {
+    transform: scaley(1) translate3d(0, 0, 0);
+ }
+ 
+ .saber-card:hover .light {
+    animation-delay: 0.3s;
+    animation-direction: alternate;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+ }
+ 
+ .saber-card:hover .lightsaber-1 {
+    animation-name: glow-1;
+ }
+ 
+ /* animation elements */
+ @keyframes glow-1 {
+    from {
+       box-shadow: 0px 0px 20px 6px rgba(30,183,208,0.4);
+    }
+ 
+    to {
+       box-shadow: 0px 0px 20px 1px rgba(30,183,208, 1);
+    }
+ }
+ 
+ @keyframes hover {
+    from {
+       transform: translate(0, -10px);
+    }
+ 
+    to {
+       transform: translate(0, 0px);
+    }
+ }
+ 
+ @keyframes shadowhover {
+    from {
+       height: 10px;
+       opacity: 0.3;
+       transform: translate(0, 5px);
+       width: 30px;
+    }
+ 
+    to {
+       height: 5px;
+       opacity: 0.7;
+       transform: translate(0, -1px);
+       width: 15px;
+    }
+ }
+
+@media screen and (max-width: 992px) {
+    .contact-me {
+        width: 50px;
+        height: 50px;
+    }
+
+    input::before {
+        top: 20px;
+        left: 80%;
+    }
+
+    .saber-card {
+        bottom: -25px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contact-me {
+        top: 80vh;
+        right: 5px;
+    }
+
+    .light {
+        height: 60vh;
+    }
+
+    .saber-card {
+        left: -5px;
+    }
+}
+
+
+
+
+

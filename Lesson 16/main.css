@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@1,600&family=Montserrat:wght@700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #212121;
+    font-size: 22px;
+    line-height: 32px;
+    color: #fff;
+    text-align: center;
+}
+
+h1{
+    font-size: 60px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+p{
+    text-align: center;
+}
+
+.container{
+    margin: 0 auto;
+}
+
+nav{
+    margin: 50px auto;
+    background-color: orange;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li{
+    display: inline-block;
+    background-color: orange;
+}
+
+
+nav a{
+    display: block;
+    padding: 0 10px;
+    font-size: 20px;
+    line-height: 60px;
+}
+
+
+nav a:hover{
+    background: #000;
+}
+
+
+nav ul ul{
+    display: none;
+    position: absolute;
+    top: 60px;
+}
+
+nav ul li:hover > ul{
+    display: inherit;
+}
+
+
+nav ul ul li{
+    width: 180px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+
+
+nav ul ul ul li{
+    position: relative;
+    top: -60px;
+    left: 180px;
+}
+
+
+li > a::after{
+    content: ' +';
+}
+
+
+
+li > a:only-child::after { content: '';}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

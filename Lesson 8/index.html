@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="all.min.css">
+</head>
+<body>
+    <h1>Lesson 8. Images. Font-awesome. Basic-animations</h1>
+    <div class="font_awesome">
+        <h2>Font Awesome + transition</h2>
+        <div class="font-icons">
+            <ul>
+                <li><i class="fas fa-check-circle"></i>Marvel</li>
+                <li><i class="fas fa-spinner fa-pulse"></i>DC</li>
+                <li><i class="fab fa-phoenix-framework"></i>StarWars</li>
+            </ul>
+        </div>
+        <p>Наведись на синий блок и узри магию <strong>transition</strong></p>
+    </div>
+    <div class="transform">
+        <h2>Transform</h2>
+        <div class="transform-block">
+            <div class="transform-element"></div>
+            <div class="transform-element"></div>
+            <div class="transform-element"></div>
+        </div>
+    </div>
+    <div class="background_image">
+        <h2>CSS. Background.</h2>
+        <p>выставляем картинку через <strong></strong></p>
+        <div class="bg_image"></div>
+    </div>
+    <div class="picture-block">
+        <h2>Images. (HTML Picture)</h2>
+        <picture>
+            <source srcset="./img/marvel.jpg" media="(min-width:1360)" type="image/jpg">
+            <source srcset="./img/DC.jpg" media="(min-width: 960px)" type="image/jpg">
+            <source srcset="./img/Starwars.webp" media="(max-width: 960px)" type="image/webp">
+            <img src="img/marvel.jpg" alt="">
+        </picture>
+        <p>
+            Использование тега picture 
+        </p>
+    </div>
+    
+</body>
+</html>

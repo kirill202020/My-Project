@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: rgb(80, 170, 92);
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    margin-top: 30px;
+    font-style: 36px;
+}
+
+
+.font_awesome{
+    margin: 20px 0;
+}
+
+.font-icons{
+    background: rgb(40, 51, 71);
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    width: 50%;
+    align-items: center;
+    margin: 20px 0;
+    transition: 2s;
+}
+
+.font-icons:hover{
+    width: 100%;
+}
+
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    padding: 15px 0;
+}
+
+
+.fas, .fab{
+    padding: 0 15px;
+}
+
+.transform-element{
+    width: 100px;
+    height: 100px;
+    background: rgb(40, 182, 170);
+    margin: 30px 0;
+    animation: skew 3s infinite;
+    transform: skew(20deg);
+    animation-direction: alternate;
+    opacity: .7;
+}
+
+.transform-block{
+    width: 100%;
+    background: rgb(233, 52, 52);
+    margin: 20px 0;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+@keyframes skew{
+    0%{
+        transform: skewX(20deg);
+    }
+    100%{
+        transform:skewX(-20deg); 
+    }
+}
+
+
+.bg_image{
+    margin: 20px 0;
+    background-image: url(img/space.jpg);
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.picture-block {
+    margin: 20px 0;
+}
+
+.picture-block img{
+    width: 100%;
+}
+

@@ -1,0 +1,57 @@
+.first-color{
+    background: green;
+    width: 300px;
+    height: 70px;
+}
+
+.second-color{
+    background: red;
+    width: 300px;
+    height: 70px;
+}
+
+.third-color{
+    background: blue;
+    width: 300px;
+    height: 70px;
+}
+
+.first-row{
+    float: left;
+    width: 300px;
+    height: 70px;
+}
+
+.fours-color{
+   background: yellow;
+   width: 900px;
+    height: 70px;
+}
+
+.fifth-color{
+   background: grey;
+   height: 70px;
+   width: 450px;
+   float: left;
+}
+
+.sixth-color{
+   background: black;
+   height: 70px;
+   width: 450px;
+   float: left;
+}
+
+.row1{
+   height: 70px;
+}
+
+.row2{
+   height: 70px;
+}
+
+.therddiv{
+   background: pink;
+   width: 900px;
+   height: 450px;
+}
