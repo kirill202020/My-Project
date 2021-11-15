@@ -1,0 +1,22 @@
+.label-top{
+    position: absolute;
+    background: #523;
+    color: #fff;
+    top: 8px;
+    right: 8px;
+    padding: 5px 10px 5px 10px;
+    font-size: .7rem;
+    font-weight: 600;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+.container{
+    max-width: 300px;
+}
